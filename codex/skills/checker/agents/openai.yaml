@@ -1,0 +1,4 @@
+interface:
+  display_name: "Checker"
+  short_description: "Deterministic tough-but-fair review and validation rubric."
+  default_prompt: "Use $checker to double-check this work with evidence, scoring, confidence, and a clear verdict."
