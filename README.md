@@ -65,6 +65,16 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/mathiasbynens/dotfiles/fork) instead, though.
 
+### Codex agent guidance
+
+This repository tracks Codex global guidance in `.codex/`:
+
+- `.codex/AGENTS.md` for durable operating rules
+- `.codex/opinions.md` for engineering taste and review defaults
+- `.codex/voices.md` for opt-in specialist review lenses
+
+Running `source bootstrap.sh` syncs these files to `~/.codex/`.
+
 ### Sensible OS X defaults
 
 When setting up a new Mac, you may want to set some sensible OS X defaults:
