@@ -51,3 +51,49 @@ Voice routing:
 - Prefer concrete implementation over advice-only responses.
 - Default to ASCII in new files unless Unicode is already used or required.
 - Keep comments sparse and useful.
+
+## Skills
+This section documents the mental models and scripts available in the
+dotfiles skills directory. All skills under `~/opencode/skills/` are
+mirrored into `~/.codex/skills/` by `bootstrap.sh`.
+
+### Engineering skills (model-invoked unless noted)
+
+| Skill | Type | Invocation | Description |
+|-------|------|------------|-------------|
+| `dblcheck` | mental model | Auto (non-trivial tasks) | Facts / Inferences / Biases + deterministic checks; trigger via `/dblcheck` |
+| `tdd` | mental model | Auto (test-first requests) | Vertical-slices red-green-refactor; one test → one implementation |
+| `feedback-loop` | mental model | Auto (debugging) | Build a red-capable deterministic loop before hypothesising |
+| `codebase-design` | mental model | Auto (new abstractions) | Deep modules vocabulary (small interface, deep implementation) |
+
+### Productivity skills (user-invoked unless noted)
+
+| Skill | Type | Invocation | Description |
+|-------|------|------------|-------------|
+| `grilling` | mental model | Auto (planning/design) | One-question-at-a-time interview loop |
+| `grill-me` | wrapper | User-invoked | Runs `/grilling`; disable-model-invocation |
+| `handoff` | script | User-invoked | Compact session into portable handoff doc; redacts secrets |
+| `adopt-skills` | script | User-invoked | Per-repo bootstrap (issue tracker + domain vocab + enabled skills) |
+| `grill-with-docs` | wrapper | User-invoked | Grilling + ADR/glossary output |
+
+### Misc skills (user-invoked)
+
+| Skill | Type | Invocation | Description |
+|-------|------|------------|-------------|
+| `writing-great-skills` | reference | User-invoked | Editing guidelines for skills in this repo |
+
+### Applying skills
+
+- Mental models (model-invoked) fire automatically when the agent
+  detects the relevant scenario. No user action needed.
+- Wrapper skills and scripts (user-invoked) require the user to name
+  them. They have `disable-model-invocation: true` in frontmatter.
+- Before reporting work done, always run `/dblcheck` on non-trivial
+  tasks.
+- For project bootstrap: run `adopt-skills` (sets up
+  `.opencode/issue-tracker.md`, `.opencode/domain.md`,
+  `.opencode/enabled-skills.md`).
+
+### Daily log location (project-relative)
+
+`.opencode/logs/YYYY-MM-DD.md`
