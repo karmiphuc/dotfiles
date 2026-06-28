@@ -1,0 +1,23 @@
+# Codex/OpenCode local state that must not be committed.
+auth.json
+history.jsonl
+session_index.jsonl
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.log
+.codex-global-state.json
+.codex-global-state.json.bak
+cache/
+sessions/
+archived_sessions/
+tmp/
+.tmp/
+.sandbox/
+marketplaces/
+node_repl/
+computer-use/
+vendor_imports/
+__pycache__/
+*.pyc
+.checker-score-case-*.json
